@@ -1,0 +1,14 @@
+(specifications->manifest
+ (list
+  "python"
+  "python-ipython"
+  "python-matplotlib"
+  "python-numpy"
+  "python-pandas"
+  "python-patsy"
+  "python-scikit-image"
+  "python-scikit-learn"
+  "python-scipy"
+  "python-seaborn"
+  "python-statsmodels"
+  ))

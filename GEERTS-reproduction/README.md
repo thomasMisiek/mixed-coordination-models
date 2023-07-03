@@ -32,8 +32,23 @@ These additional modifications were:
 
 ## Installation
 
-Install the project by cloning it on your computer or by downloading a compressed version.</br>
-Install the required packages using the environment.yml file and the 'conda env create -f environment.yml', followed by the 'conda activate geerts_reproduction' command.
+Using [GNU Guix](https://guix.gnu.org), set up the complete software
+environment with:
+
+```
+$ guix time-machine -C channels.scm         \
+       -- shell -m manifest.scm --container \
+       --expose=../images=$HOME/path/to/local/clone/images
+```
+
+The `channels.scm` file instructs how to [replicate the exact Guix revision
+used for
+testing](https://guix.gnu.org/manual/en/html_node/Replicating-Guix.html),
+while `manifest.scm` defines [the software
+environment](https://guix.gnu.org/manual/en/html_node/Writing-Manifests.html)
+of this computational experiment.
+
+Alternatively, if you are not using Guix, install the required packages using the environment.yml file and the 'conda env create -f environment.yml', followed by the 'conda activate geerts_reproduction' command.
 You can also install the required packages using the requirements.txt file and the 'pip install -r requirements.txt' command
 
 ## Usage
